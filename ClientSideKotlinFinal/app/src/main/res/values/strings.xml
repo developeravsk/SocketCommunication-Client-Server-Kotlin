@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ClientSideKotlinFinal</string>
+    <string name="client_app">Client App:</string>
+    <string name="ip_address">IP Address:</string>
+    <string name="please_type_server_ip">Please type server ip</string>
+    <string name="port_number">Port Number:</string>
+    <string name="please_type_server_port">Please type server port</string>
+    <string name="submit">Submit</string>
+    <string name="connection_status">Connection status:</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="user_message_to_server">User message to Server</string>
+    <string name="type_your_message">Type your message</string>
+    <string name="send_message">Send Message</string>
+</resources>

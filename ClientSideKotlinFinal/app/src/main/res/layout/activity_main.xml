@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainActivity"
+    android:background="@drawable/gradient_list"
+    android:id="@+id/relativelayout">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent" />
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:id="@+id/cardview"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/cardview_light_background"
+        tools:ignore="PrivateResource">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textServerDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:text="@string/client_app"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/textIPAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/ip_address"
+                android:textSize="15sp"
+                android:layout_below="@id/textServerDetail"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/valueIPAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="@string/please_type_server_ip"
+                android:background="@drawable/edittext_background"
+                android:padding="10dp"
+                android:textSize="15sp"
+                android:inputType="text"
+                android:layout_below="@id/textIPAddress"
+                android:textStyle="bold"
+                android:autofillHints="" />
+
+
+            <TextView
+                android:id="@+id/textPortNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/port_number"
+                android:textSize="15sp"
+                android:layout_below="@id/valueIPAddress"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/valuePortNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="@string/please_type_server_port"
+                android:textSize="15sp"
+                android:background="@drawable/edittext_background"
+                android:padding="10dp"
+                android:layout_below="@id/textPortNumber"
+              
+                android:textStyle="bold"
+                android:autofillHints=""
+                android:inputType="number"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit"
+        android:textColor="@android:color/white"
+        android:background="@color/colorAccent"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:textSize="12sp"
+        android:id="@+id/submit"
+        android:layout_below="@id/cardview"/>
+    <TextView
+        android:id="@+id/textConnectionStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/connection_status"
+        android:textSize="15sp"
+        android:layout_below="@id/submit"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/valueConnectionStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/disconnected"
+        android:textSize="15sp"
+        android:layout_below="@id/submit"
+        android:layout_toEndOf="@id/textConnectionStatus"
+        android:textStyle="bold" />
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/valueConnectionStatus"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:id="@+id/cardview1"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/cardview_light_background"
+        tools:ignore="PrivateResource">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <TextView
+                android:id="@+id/textMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/user_message_to_server"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/valueMsg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="@string/type_your_message"
+                android:background="@drawable/edittext_background"
+                android:padding="10dp"
+                android:textSize="15sp"
+                android:layout_below="@id/textMsg"
+                android:textStyle="bold"
+                android:autofillHints=""
+                android:inputType="text"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/send_message"
+                android:textColor="@android:color/white"
+                android:background="@color/colorAccent"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:textSize="12sp"
+                android:id="@+id/send"
+                android:layout_below="@id/valueMsg"
+                android:padding="20sp"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ServerSideKotlinFinal</string>
+    <string name="instructions">Note: Please use the above ip address and port number in your app to connect to this server</string>
+    <string name="server_detail">Server Detail:</string>
+    <string name="ip_address">IP Address:</string>
+    <string name="port_number">Port Number:</string>
+    <string name="start_server">Start Server</string>
+</resources>
